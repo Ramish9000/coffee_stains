@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
   has_many :response
   has_many :question
   has_many :story
+
+  mount_uploader :profile_cover_page, ProfileCoverPageUploader
 end

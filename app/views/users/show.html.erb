@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+   <b>Cover Page</b>
+   <%= image_tag @user.profile_cover_page.url %>
+</p>
+
 <p>
   <strong>Names:</strong>
   <%= @user.name %>
