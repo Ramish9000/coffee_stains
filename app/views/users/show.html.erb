@@ -11,8 +11,8 @@
 
 
 <p>
-   <b>Cover Page</b>
-   <%= image_tag @user.profile_cover_page.url %>
+ <b>Cover Page</b>
+ <%= image_tag @user.profile_cover_page.url %>
 </p>
 
 <p>
@@ -30,10 +30,10 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+<!-- <p>
+  <strong>Currently Working On:</strong>
+  <%= @user.currently_working_on %>
+</p> -->
 
 <p>
   <strong>Mood:</strong>
@@ -45,15 +45,13 @@
   <%= @user.Quote %>
 </p>
 
-<p>
-  <strong>Snippet title:</strong>
-  <%= @user.snippet_title %>
-</p>
-
-<p>
-  <strong>Snippet content:</strong>
-  <%= @user.snippet_content %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="Snippet-container">
+  <p >
+    <strong>Snippet title:</strong>
+    <%= @user.snippet_title %>
+    <br>
+    <br>
+    <strong>Snippet content:</strong>
+    <%= @user.snippet_content %>
+  </p>
+</div>
