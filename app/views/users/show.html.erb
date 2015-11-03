@@ -11,13 +11,13 @@
 
 
 <p>
- <b>Cover Page</b>
- <%= image_tag @user.profile_cover_page.url %>
+  <b>Cover Page:</b>
+  <%= link_to image_tag(@user.profile_cover_page.thumb.url), @user.profile_cover_page.url %>
 </p>
 
 <p>
-  <b>Profile Photo</b>
-  <%= image_tag @user.profile_photo.url %>
+  <b>Profile Photo:</b>
+  <%= link_to image_tag(@user.profile_photo.thumb.url), @user.profile_photo.url %>
 </p>
 
 <p>
