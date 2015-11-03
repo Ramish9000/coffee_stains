@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoffeeStains</title>
+  <title>Coffee Stains</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
+
+
+
 <body>
+
+<!-- <%# flash.each do |name, message| %>
+  <div class="flash-message flash-message-<%#= name %>">
+    <%#= message %>
+  </div>
+<%# end %> -->
+
+
+
+<!-- if current user(true = not empty)  -->
+<div class='login'>
+  <% if current_user %>
+
+ <!-- Display <p> -->
+      <!-- <button><%#= current_user.username %></button> -->
+
+<!--  Ruby link Log out, which destroys -->
+     <%#= link_to "Log out", destroy_user_session_path, method: :delete %>
+
+  <% else %>
+     <%= link_to "Sign In", new_user_session_path %>
+     <%= link_to "Register", new_user_registration_path %>
+  <% end %>
+</div>
+
 
 <%= yield %>
 
