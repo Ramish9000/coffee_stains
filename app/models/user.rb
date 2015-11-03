@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   has_many :story
 
   mount_uploader :profile_cover_page, ProfileCoverPageUploader
+  mount_uploader :profile_photo, ProfilePhotoUploader
 end
