@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Coffee Stains</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,7 +12,34 @@
 
 
 
-<body>
+
+
+
+<body> 
+
+  <% if current_user %>
+    <div class="banner clearfix">
+
+      <button>Suggestions Board</button>
+      <button>Story Board</button>
+      <button>Writers</button>
+      <button>Store</button>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= current_user.username %> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">My Profile</a></li>
+          <li><a href="#">My Writing Desk</a></li>
+
+          <li role="separator" class="divider"></li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        </ul>
+      </div>
+
+    </div>
+    <% end %>
 
 <!-- <%# flash.each do |name, message| %>
   <div class="flash-message flash-message-<%#= name %>">
