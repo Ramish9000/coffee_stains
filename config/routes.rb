@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users #, controllers: { registrations: "registrations" }
 
   #all the roots in the /routes
-  resources :users, :story, :response, :welcome, :home
+  resources :users, :story, :response, :welcome, :home, :about_us
 
   # get "users", to: "users#index"
   # get "story", to: "stories#index"
