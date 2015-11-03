@@ -9,15 +9,19 @@ class SessionsController < ApplicationController
   if user && user.authenticate(params[:password])
   	session[:user_id] = user.id
    redirect_to root_path, notice: "logged in!"
-  else
+ else
    flash.now.alert = "invalid login credentials"
    render "new"
-  end
+ end
  end
 
- def destroy
+def destroy
   session[:user_id] = nil
   redirect_to root_url, notice: "logged out!"
- end
+end
+
+# def after_sign_in
+#   redirect_to '/home'
+# end
 
 end

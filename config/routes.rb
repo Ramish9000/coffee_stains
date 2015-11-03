@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
-  devise_for :users
+  devise_for :users #, controllers: { registrations: "registrations" }
 
   #all the roots in the /routes
   resources :users, :story, :response, :welcome, :home
