@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :rememberable, :trackable, :validatable
-  has_many :response
-  has_many :question
-  has_many :story
+  has_many :responses
+  has_many :questions
+  has_many :stories
 
   mount_uploader :profile_cover_page, ProfileCoverPageUploader
   mount_uploader :profile_photo, ProfilePhotoUploader

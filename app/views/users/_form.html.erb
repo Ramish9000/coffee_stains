@@ -49,6 +49,21 @@
     <%= f.label :snippet_content %><br>
     <%= f.text_area :snippet_content %>
   </div>
+
+  <div class="field">
+    <% Story.all.each do |str| %>
+    <%= "user[story_ids][]", str.id, @user.story_ids.include?(str.id), id: "user#{str.id}" %>
+     <label for="user<%= str.content %>"> <%= str.content %></label>
+     <br />
+    <% end %>
+
+<!--   <div class="field">
+    <%# Story.all.each do |str| %>
+    <%#= "user[story_ids][]", str.id, @user.story_ids.include?(str.id), id: "user#{str.id}" %>
+     <label for="user<%#= str.content %>"> <%#= str.content %></label>
+     <br />
+    <%# end %> -->
+
   <div class="actions">
     <%= f.submit %>
   </div>

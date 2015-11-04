@@ -45,6 +45,19 @@
   <%= @user.Quote %>
 </p>
 
+<!-- Don't need this? -->
+<p>
+  <strong>Stories:</strong>
+  <% @user.stories.each do |story| %>
+    <%= story.title %>
+
+    <%= link_to 'Show story', story %>
+    <% if current_user == @user %>
+      <%= link_to 'Edit story', edit_story_path(story) %>
+    <% end %>
+  <% end %>
+</p>
+
 <div class="Snippet-container">
   <p >
     <strong>Snippet title:</strong>
