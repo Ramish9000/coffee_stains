@@ -16,13 +16,16 @@
   <tbody>
     <% @stories.each do |story| %>
       <tr>
-        <td><%= story.user.name %></td>
-        <td><%= image_tag story.image.url %></td>
+        <td><%= story.user_id %></td>
+        <td><%= image_tag story.image.detail.url %></td>
         <td><%= story.title %></td>
         <td><%= story.content %></td>
+
+        <%# if current_user == @user %>
         <td><%= link_to 'Show', story %></td>
         <td><%= link_to 'Edit', edit_story_path(story) %></td>
         <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# end %>
       </tr>
     <% end %>
   </tbody>
