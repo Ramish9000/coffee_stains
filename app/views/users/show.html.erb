@@ -1,60 +1,75 @@
 <p id="notice"><%= notice %></p>
 
+<div>
 
-<div class="banner clearfix">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li><a href="#Profile" aria-controls="Profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li><a href="#Stories" aria-controls="Stories" role="tab" data-toggle="tab">Stories</a></li>
+    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
 
-  <button>Background</button>
-  <button>Writings</button>
-  <button>Contributions</button>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="Profile">
+
+      <p>
+        <b>Cover Page:</b>
+        <%= link_to image_tag(@user.profile_cover_page.thumb.url), @user.profile_cover_page.url %>
+      </p>
+
+      <p>
+        <b>Profile Photo:</b>
+        <%= link_to image_tag(@user.profile_photo.thumb.url), @user.profile_photo.url %>
+      </p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+
+      <div class="Snippet-container">
+        <p >
+          <strong>Snippet title:</strong>
+          <%= @user.snippet_title %>
+          <br>
+          <br>
+          <strong>Snippet content:</strong>
+          <%= @user.snippet_content %>
+        </p>
+      </div>
+    </div>
+
+
+
+
+<!-- Displays associated model and content -->
+    <div role="tabpanel" class="tab-pane" id="Stories">
+      <p>
+        <strong>Stories:</strong>
+        <% @user.stories.each do |story| %>
+        <%= story.title %>
+
+        <%= link_to 'Show story', story %>
+        <% if current_user == @user %>
+        <%= link_to 'Edit', edit_story_path(story) %>
+        <%= link_to 'Delete', story_path(story), method: :delete  %>
+        <% end %>
+        <% end %>
+      </p>
+    </div>
+
+
+
+
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
 
 </div>
 
 
-<p>
-  <b>Cover Page:</b>
-  <%= link_to image_tag(@user.profile_cover_page.thumb.url), @user.profile_cover_page.url %>
-</p>
-
-<p>
-  <b>Profile Photo:</b>
-  <%= link_to image_tag(@user.profile_photo.thumb.url), @user.profile_photo.url %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<!-- <p>
-  <strong>Currently Working On:</strong>
-  <%#= @user.currently_working_on %>
-</p> -->
-
-<!-- Don't need this? -->
-<p>
-  <strong>Stories:</strong>
-  <% @user.stories.each do |story| %>
-    <%= story.title %>
-
-    <%= link_to 'Show story', story %>
-    <% if current_user == @user %>
-      <%= link_to 'Edit story', edit_story_path(story) %>
-    <% end %>
-  <% end %>
-</p>
-
-<div class="Snippet-container">
-  <p >
-    <strong>Snippet title:</strong>
-    <%= @user.snippet_title %>
-    <br>
-    <br>
-    <strong>Snippet content:</strong>
-    <%= @user.snippet_content %>
-  </p>
-</div>

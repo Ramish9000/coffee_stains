@@ -1,5 +1,4 @@
 class Story < ActiveRecord::Base
 	belongs_to :user
-	has_many :question
-
+	mount_uploader :image, ImageUploader
 end

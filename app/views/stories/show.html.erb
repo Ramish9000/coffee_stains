@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @story.title %>
+  <b>Image:</b>
+  <%= image_tag @story.image.url %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @story.image %>
+  <strong>Title:</strong>
+  <%= @story.title %>
 </p>
 
 <p>
@@ -15,6 +15,6 @@
   <%= @story.content %>
 </p>
 
-
+<td><%= link_to 'Create', new_story_path(@story) %></td>
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>
