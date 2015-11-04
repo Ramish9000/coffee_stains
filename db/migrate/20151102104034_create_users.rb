@@ -4,8 +4,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password
-      t.string :mood
-      t.string :Quote
       t.string :snippet_title
       t.text :snippet_content
 

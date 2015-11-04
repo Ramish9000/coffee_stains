@@ -9,7 +9,6 @@
       <th>Title</th>
       <th>Image</th>
       <th>Content</th>
-      <th>Genre</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +20,6 @@
         <td><%= story.title %></td>
         <td><%= story.image %></td>
         <td><%= story.content %></td>
-        <td><%= story.genre %></td>
         <td><%= link_to 'Show', story %></td>
         <td><%= link_to 'Edit', edit_story_path(story) %></td>
         <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>

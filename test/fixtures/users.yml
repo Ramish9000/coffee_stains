@@ -4,8 +4,6 @@ one:
   name: MyString
   email: MyString
   password: MyString
-  mood: MyString
-  Quote: MyString
   snippet_title: MyString
   snippet_content: MyText
 
@@ -13,7 +11,5 @@ two:
   name: MyString
   email: MyString
   password: MyString
-  mood: MyString
-  Quote: MyString
   snippet_title: MyString
   snippet_content: MyText

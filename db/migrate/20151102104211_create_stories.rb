@@ -5,7 +5,6 @@ class CreateStories < ActiveRecord::Migration
       t.string :title
       t.string :image
       t.text :content
-      t.string :genre
 
       t.timestamps null: false
     end

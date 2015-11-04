@@ -5,11 +5,9 @@ one:
   title: MyString
   image: MyString
   content: MyText
-  genre: MyString
 
 two:
   user_id: MyString
   title: MyString
   image: MyString
   content: MyText
-  genre: MyString
