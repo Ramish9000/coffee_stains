@@ -16,24 +16,14 @@
 
         
         <img class="img-rounded" <%= image_tag story.image.detail.url %> ></img>
-        <p><%= story.user.name %></p>
-        <td><%= story.title %></td>
+        <p><%= story.title %></p>
         <td><%= story.summary %></td>
-
-
-        <td><%= link_to 'Show', story %></td>
-        <td><%= link_to 'Edit', edit_story_path(story) %></td>
-        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <p><%= story.user.name %></p>
         
 
     <% end %>
 
   </div>
-
-
-
-
-
 
 </body>
 </html>
