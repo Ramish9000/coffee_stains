@@ -99,15 +99,16 @@
 }
 
 .prf-txt {
-	width: 150px;
+	width: 200px;
 	font-size: 20px;
 	font-family: Yuppy SC;
 	margin: 20px;
+	text-align: center;
 }
 
-.Snippet-container {
+/*.Snippet-container {
 	width: 150px;
 	font-size: 20px;
 	font-family: Yuppy SC;
 	margin: 20px;
-}
+}*/
