@@ -22,7 +22,7 @@
 }
 
 .banner {
-	background-color: #6B4A29;
+	background-color: #FE5F55;
 }
 
 .banner-buttons {
@@ -48,3 +48,26 @@
 	color: white;
 }
 */
+
+.str-brd-hdn {
+	text-align: center;
+	font-family: Yuppy SC;
+	font-size: 45px;
+}
+
+.str-brd-txt {
+	width: 150px;
+	font-size: 20px;
+	font-family: Yuppy SC;
+	margin: 20px;
+	background: url("/assets/Str-brd-bg.png")
+}
+
+.str-brd-cnt {
+	float: left;
+}
+
+.str-brd-bdy {
+	background: url("/assets/books-wallpaper-desktop.jpg") repeat;
+	background-size: cover;
+}
