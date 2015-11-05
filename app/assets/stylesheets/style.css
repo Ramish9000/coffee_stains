@@ -1,5 +1,5 @@
 .welcome-body {
-	background: url("/assets/typewriter-background.jpg") repeat;
+	background: url("/assets/New-back.png") repeat;
 	background-size: cover;
 }
 
@@ -8,7 +8,7 @@
 	color: brown;
 	font-size: 75px;
 	text-align: center;
-	line-height: 400px;
+	line-height: 250px;
 }
 
 .main-logo img {
