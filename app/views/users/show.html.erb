@@ -59,15 +59,13 @@
       <!-- <strong>Stories:</strong> -->
       <% @user.stories.each do |story| %>
 
+      <%= link_to story do %>
       <%= image_tag story.image.detail.url%>
+      <% end %>
 
       <p class="prf-str-txt"><%= story.title %></p>
-
-      <%= link_to 'Show story', story %>
-      <% if current_user == @user %>
-      <%= link_to 'Edit', edit_story_path(story) %>
-      <%= link_to 'Delete', story_path(story), method: :delete  %>
-      <% end %>
+      <p class="prf-str-txt"><%= story.summary %></p>
+      
       <% end %>
       </body>
 
