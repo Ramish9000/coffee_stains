@@ -41,7 +41,7 @@ class ProfilePhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :detail do
-    process :resize_to_fit => [400, 400]
+    process :resize_to_fit => [350, 350]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

@@ -74,7 +74,7 @@
 	font-size: 45px;
 }
 
-.str-brd-txt {
+.brd-txt {
 	width: 150px;
 	font-size: 20px;
 	font-family: Yuppy SC;
@@ -93,3 +93,21 @@
 
 
 /*WRITER*/
+.wtr-brd-bdy {
+	background: url("/assets/1.png") repeat;
+	background-size: cover;
+}
+
+.prf-txt {
+	width: 150px;
+	font-size: 20px;
+	font-family: Yuppy SC;
+	margin: 20px;
+}
+
+.Snippet-container {
+	width: 150px;
+	font-size: 20px;
+	font-family: Yuppy SC;
+	margin: 20px;
+}

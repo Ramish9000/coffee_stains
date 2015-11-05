@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :stories
 
-  mount_uploader :profile_cover_page, ProfileCoverPageUploader
+  # mount_uploader :profile_cover_page, ProfileCoverPageUploader
   mount_uploader :profile_photo, ProfilePhotoUploader
 end
