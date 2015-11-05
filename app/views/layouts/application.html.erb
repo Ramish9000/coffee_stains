@@ -21,15 +21,15 @@
     <div class="banner clearfix">
 
       <button><%= link_to "Story Board", stories_path %></button>
-      <button>Writers</button>
-      <button>About Us</button>
+      <button><%= link_to "Writers", users_path %></button>
+      <button><%= link_to "About Us", about_us_path %></button>
 
       <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= current_user.username %> <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a href="#">My Profile</a></li>
+          <li><%= link_to "My Profile", user_path(current_user) %></li>
           <li><a href="#">My Writing Desk</a></li>
 
           <li role="separator" class="divider"></li>
