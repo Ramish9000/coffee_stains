@@ -1,4 +1,4 @@
-Welcome Page + Layout/Appl Welcome*/
+/*Welcome Page + Layout/Appl Welcome*/
 .welcome-body {
 	background: url("/assets/New-back.png") repeat;
 	background-size: cover;
@@ -127,4 +127,8 @@ Welcome Page + Layout/Appl Welcome*/
 	font-family: Yuppy SC;
 	margin: 20px;
 	text-align: center;
+}
+
+.CoverPhoto {
+	width: 50%;
 }
