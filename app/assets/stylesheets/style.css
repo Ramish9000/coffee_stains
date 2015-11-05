@@ -1,4 +1,4 @@
-/*Welcome Page + Layout/Appl Welcome*/
+Welcome Page + Layout/Appl Welcome*/
 .welcome-body {
 	background: url("/assets/New-back.png") repeat;
 	background-size: cover;
@@ -98,9 +98,11 @@
 	background-size: cover;
 }
 
+/*PROFILE*/
 .prf-txt {
 	width: 200px;
 	font-size: 20px;
+	color: white;
 	font-family: Yuppy SC;
 	margin: 20px;
 	text-align: center;
@@ -112,3 +114,17 @@
 	font-family: Yuppy SC;
 	margin: 20px;
 }*/
+
+.prf-bdy {
+	background: url("/assets/62.jpg") repeat;
+	background-size: cover;
+}
+
+.prf-str-txt {
+	width: 200px;
+	font-size: 20px;
+	color: white;
+	font-family: Yuppy SC;
+	margin: 20px;
+	text-align: center;
+}
