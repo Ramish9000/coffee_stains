@@ -44,17 +44,6 @@
     </div>
     <% end %>
 
-
-<div class='login'>
-  <% if current_user %>
-
-  <% else %>
-     <%= link_to "Sign In", new_user_session_path %>
-     <%= link_to "Sign Up", new_user_registration_path %>
-  <% end %>
-</div>
-
-
 <%= yield %>
 
 </body>
