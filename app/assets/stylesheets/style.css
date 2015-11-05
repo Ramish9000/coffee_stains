@@ -132,3 +132,13 @@
 .CoverPhoto {
 	width: 50%;
 }
+
+/*ABOUT US*/
+
+.abt-us-txt {
+	width: 1000px;
+	font-size: 20px;
+	color: brown;
+	font-family: Yuppy SC;
+	margin: 20px;
+}
