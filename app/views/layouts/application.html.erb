@@ -20,6 +20,8 @@
   <% if current_user %>
     <div class="banner clearfix">
 
+        <%= link_to image_tag("Logo.png", :alt => "Logo"), users_path, class: "main-logo" %>
+
       <button><%= link_to "Story Board", stories_path %></button>
       <button><%= link_to "Writers", users_path %></button>
       <button><%= link_to "About Us", about_us_path %></button>
@@ -39,7 +41,6 @@
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </ul>
       </div>
-
     </div>
     <% end %>
 
@@ -54,12 +55,6 @@
 <!-- if current user(true = not empty)  -->
 <div class='login'>
   <% if current_user %>
-
- <!-- Display <p> -->
-      <!-- <button><%#= current_user.username %></button> -->
-
-<!--  Ruby link Log out, which destroys -->
-     <%#= link_to "Log out", destroy_user_session_path, method: :delete %>
 
   <% else %>
      <%= link_to "Sign In", new_user_session_path %>
