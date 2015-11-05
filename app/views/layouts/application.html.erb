@@ -13,33 +13,34 @@
 <body> 
 
   <% if current_user %>
-    <div class="banner">
 
-        <%#= link_to image_tag("Logo.png", :alt => "Logo"), users_path, class: "main-logo" %>
 
-      <button class="banner-buttons"><%= link_to "Story Board", stories_path %></button>
-      <button class="banner-buttons"><%= link_to "Writers", users_path %></button>
-      <button class="banner-buttons"><%= link_to "About Us", about_us_path %></button>
 
-      <div class="btn-group banner">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= current_user.username %> <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><%= link_to "My Profile", user_path(current_user) %></li>
-          <li><a href="#">My Writing Desk</a></li>
+  <div class="banner">
 
-          <li role="separator" class="divider"></li>
-          <%= link_to "Edit Profile", edit_user_path(current_user) %>
+    <button class="banner-buttons"><%= link_to "Story Board", stories_path %></button>
+    <button class="banner-buttons"><%= link_to "Writers", users_path %></button>
+    <button class="banner-buttons"><%= link_to "About Us", about_us_path %></button>
 
-          <li role="separator" class="divider"></li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        </ul>
-      </div>
+    <div class="btn-group banner">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= current_user.username %> <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li class="drp-dwn-btn"><%= link_to "My Profile", user_path(current_user) %></li>
+        <li class="drp-dwn-btn"><%= link_to "My Writing Desk", new_story_path(current_user) %></li>
+
+        <li role="separator" class="divider"></li>
+        <%= link_to "Edit Profile", edit_user_path(current_user) %>
+
+        <li role="separator" class="divider"></li>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      </ul>
     </div>
-    <% end %>
+  </div>
+  <% end %>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
