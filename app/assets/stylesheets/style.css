@@ -29,7 +29,7 @@
 	width: 100px;
 	height: 50px;
 	margin: 30px;
-	/*font-size: auto;*/
+	
 }
 
 .sign-in-menu-container {
@@ -68,6 +68,6 @@
 }
 
 .str-brd-bdy {
-	background: url("/assets/books-wallpaper-desktop.jpg") repeat;
+	background: #06E0B3;
 	background-size: cover;
 }
