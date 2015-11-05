@@ -18,13 +18,13 @@
 <body> 
 
   <% if current_user %>
-    <div class="banner clearfix">
+    <div class="banner">
 
         <%= link_to image_tag("Logo.png", :alt => "Logo"), users_path, class: "main-logo" %>
 
-      <button><%= link_to "Story Board", stories_path %></button>
-      <button><%= link_to "Writers", users_path %></button>
-      <button><%= link_to "About Us", about_us_path %></button>
+      <button class="banner-buttons"><%= link_to "Story Board", stories_path %></button>
+      <button class="banner-buttons"><%= link_to "Writers", users_path %></button>
+      <button class="banner-buttons"><%= link_to "About Us", about_us_path %></button>
 
       <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
