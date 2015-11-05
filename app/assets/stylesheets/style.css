@@ -1,5 +1,14 @@
+.welcome-body {
+	background: url("/assets/typewriter-background.jpg") repeat;
+	background-size: cover;
+}
+
 .welcome-Text1 {
 	font-family: Yuppy SC;
+	color: brown;
+	font-size: 75px;
+	text-align: center;
+	line-height: 400px;
 }
 
 .main-logo img {
@@ -10,9 +19,3 @@
 	width: 100px;
 	height: 50px;
 }
-
-
-/*.btn-group {
-	width: 100px;
-	height: 100px;
-}*/
