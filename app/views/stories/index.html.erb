@@ -1,22 +1,18 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Story Board</title>
+</head>
+<body>
 
 <h1>Story Board</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Writer</th>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @stories.each do |story| %>
       <tr>
-        <td><%= story.user.username %></td>
+        <td><%= story.user.name %></td>
         <td><%= image_tag story.image.detail.url %></td>
         <td><%= story.title %></td>
         <td><%= story.content %></td>
@@ -34,6 +30,5 @@
   </tbody>
 </table>
 
-<br>
-
-<%#= link_to 'New Story', new_story_path %>
+</body>
+</html>

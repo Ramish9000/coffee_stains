@@ -22,7 +22,7 @@
 }
 
 .banner {
-	background-color: #683319;
+	background-color: #6B4A29;
 }
 
 .banner-buttons {
@@ -36,3 +36,15 @@
 	height: 400px;
 	width: 400px;
 }
+/*
+.about-us-bkg {
+	background: url("/assets/Typewriter.jpg") repeat;
+	background-size: cover;
+}
+
+.about-us-text {
+	font-family: Yuppy SC;
+	font-size: 40px;
+	color: white;
+}
+*/
