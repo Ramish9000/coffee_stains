@@ -1,3 +1,5 @@
+/*Welcome Page + Layout/Appl Welcome*/
+
 .welcome-body {
 	background: url("/assets/New-back.png") repeat;
 	background-size: cover;
@@ -11,11 +13,26 @@
 	line-height: 250px;
 }
 
+.login {
+	text-align: center;
+}
+
 .main-logo img {
 	width: 200px;
+}
+
+.banner {
+	background-color: #683319;
 }
 
 .banner-buttons {
 	width: 100px;
 	height: 50px;
+	margin: 30px;
+	/*font-size: auto;*/
+}
+
+.sign-in-menu-container {
+	height: 400px;
+	width: 400px;
 }
