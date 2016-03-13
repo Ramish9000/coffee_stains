@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Page</title>
+</head>
+<body class="prf-bdy">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+
+    <li><a href="#Profile" aria-controls="Profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li><a href="#Stories" aria-controls="Stories" role="tab" data-toggle="tab">Stories</a></li>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="Profile">
+
+      <div class="prf-cnt">
+      <p>
+        <%= link_to image_tag(@user.profile_photo.detail.url, :class => "img-circle"), @user.profile_photo.url %>
+      </p>
+
+
+      <p class="prf-txt">
+       <%= @user.name %> 
+      </p>
+
+      <p class="prf-txt">
+        <%= @user.email %>
+      </p>
+
+<!--       <div class="Snippet-container">
+        <p >
+
+          <%#= @user.snippet_title %>
+          <br>
+          <br>
+
+          <%#= @user.snippet_content %>
+        </p>
+      </div> -->
+
+      </div>
+      
+  </div>
+
+
+
+
+
+<!-- STORIES TAB -->
+  <div role="tabpanel" class="tab-pane" id="Stories">
+    <p>
+
+
+    <body class="prf-str-bdy">
+      <!-- <strong>Stories:</strong> -->
+      <% @user.stories.each do |story| %>
+
+      <%= link_to story do %>
+      <%= image_tag story.image.detail.url%>
+      <% end %>
+
+      <p class="prf-str-txt"><%= story.title %></p>
+      <p class="prf-str-txt"><%= story.summary %></p>
+      
+      <% end %>
+      </body>
+
+
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
+

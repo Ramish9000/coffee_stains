@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Writers</title>
+</head>
+
+
+<body class="wtr-brd-bdy">
+  <h1 class="str-brd-hdn">Writers</h1>
+
+  <table>
+
+    <tbody>
+      <% @users.each do |user| %>
+      <%= link_to user do %>
+
+<!--       <tr> -->
+        <%= image_tag user.profile_photo.detail.url, class: "img-circle" %>
+        <p class="brd-txt"><%= user.name %></p>
+<!--       </tr> -->
+      <% end %>
+      <% end %>
+    </tbody>
+
+  </table>
+
+
+</body>
+</html>
