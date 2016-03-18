@@ -13,14 +13,6 @@
     <% if current_user %>
     <% else %>
 
-    <div class="btn-group">
-
-      <button class="btn btn-default " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= link_to "Sign In", new_user_session_path %> <span class="caret"></span>
-      </button>
-
-      <ul class="dropdown-menu">
-
         <li class="sign-in-menu-container">
 
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -49,7 +41,6 @@
 
         </li>
 
-      </ul>
 
     </div>
 

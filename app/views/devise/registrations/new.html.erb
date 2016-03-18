@@ -5,26 +5,11 @@
 <head>
   <title>Sign Up</title>
 </head>
-
-<body class="welcome-body">
-
-  <h1 class="welcome-Text1" > Welcome to Coffee Stains </h1>
   
   <div class='login'>
 
     <% if current_user %>
     <% else %>
-
-    <div class="btn-group">
-
-    <%= link_to "Sign In", new_user_session_path, class: "btn btn-default" %>
-
-      <button class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= link_to "Sign Up", new_user_registration_path %><span class="caret"></span>
-      </button>
-
-
-      <ul class="dropdown-menu">
 
         <li>
           
@@ -65,8 +50,7 @@
           <% end %>
 
         </li>
-
-      </ul>
+        
     </div>
 
     <% end %>
