@@ -21,20 +21,41 @@
 	margin-left: 35%
 }
 
-.new_user {
-	background-color: rgba(81, 59, 86, 0.7);
-	padding: 30px;
-	width: 45%;
+#hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid black !important;
 }
 
-.field {
-	padding-left: 20%;
-}
-
+/*Bootstrap box*/
 #box {
 	width: 400px;
+	margin-top: 10%;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*Ruby box*/
+.new_user {
+	/*background-color: rgba(81, 59, 86, 0.7);*/
+	padding: 30px;
+	width: 100%;
+	color: #513B56;
 }
 
 #row {
 	margin-left: 35%
+}
+
+#wlcm-caption-signup {
+	margin-left: 30%
+}
+
+.enter {
+	margin-left: 33%;
+	margin-top: 20px;
+}
+
+#already-registered {
+	margin-left: 20%
 }
