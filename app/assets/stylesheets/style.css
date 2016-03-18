@@ -1,16 +1,4 @@
 /*Welcome Page + Layout/Appl Welcome*/
-.welcome-body {
-	background: url("/assets/New-back.png") repeat;
-	background-size: cover;
-}
-
-.welcome-Text1 {
-	font-family: Yuppy SC;
-	color: brown;
-	font-size: 75px;
-	text-align: center;
-	line-height: 250px;
-}
 
 .login {
 	text-align: center;
