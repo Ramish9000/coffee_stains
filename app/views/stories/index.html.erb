@@ -5,8 +5,10 @@
 </head>
 
 
-<body class="str-brd-bdy">
-  <h1 class="str-brd-hdn">Story Board</h1>
+<body class="storyboard-body">
+
+<!-- NAVIGATION BAR -->
+
 
   <div>
 
@@ -15,10 +17,11 @@
     <%= image_tag story.image.detail.url, class: "img-rounded"%>
     <% end %> 
 
-    <p class="brd-txt"><%= story.title %></p>
-    <p class="brd-txt"><%= story.summary %></p>
-    <p class="brd-txt"><%= story.user.name %></p>
+    <p><%= story.title %></p>
+    <p><%= story.summary %></p>
+    <p><%= story.user.name %></p>
     <% end %>
+
   </div>
 
 

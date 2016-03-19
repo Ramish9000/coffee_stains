@@ -56,27 +56,9 @@
 
 
 /*STORY BOARD*/
-.str-brd-hdn {
-	text-align: center;
-	font-family: Yuppy SC;
-	font-size: 45px;
-}
-
-.brd-txt {
-	width: 150px;
-	font-size: 20px;
-	font-family: Yuppy SC;
-	margin: 20px;
-	background: url("/assets/Str-brd-bg.png")
-}
 
 .str-brd-cnt {
 	float: left;
-}
-
-.str-brd-bdy {
-	background: #06E0B3;
-	background-size: cover;
 }
 
 
