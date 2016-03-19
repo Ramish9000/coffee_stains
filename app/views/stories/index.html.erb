@@ -10,15 +10,15 @@
 
   <div>
 
-            <% @stories.each do |story| %> 
-            <%= link_to story do %>
-            <%= image_tag story.image.detail.url, class: "img-rounded"%>
-            <% end %> 
+    <% @stories.each do |story| %> 
+    <%= link_to story do %>
+    <%= image_tag story.image.detail.url, class: "img-rounded"%>
+    <% end %> 
 
-            <p class="brd-txt"><%= story.title %></p>
-            <p class="brd-txt"><%= story.summary %></p>
-            <p class="brd-txt"><%= story.user.name %></p>
-            <% end %>
+    <p class="brd-txt"><%= story.title %></p>
+    <p class="brd-txt"><%= story.summary %></p>
+    <p class="brd-txt"><%= story.user.name %></p>
+    <% end %>
   </div>
 
 
