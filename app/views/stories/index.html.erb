@@ -18,13 +18,16 @@
         <hr>
       </div>
       <% @stories.each do |story| %> 
-      <%= link_to story do %>
 
       <div class="col-sm-3 text-center">
+      
+        <%= link_to story do %>
         <%= image_tag story.image.detail.url, class: "storyboard-img" %>
-        <h3><%= story.title %>
-          <small><%= story.summary %></small>
-        </h3>
+        <p id="storyboard-storyTitle"><%= story.title %></p>
+        <% end %>
+
+        <%= link_to story.user do %>
+        <h6><%= story.user.username %></h6>
         <% end %>
       </div>
       <% end %>
