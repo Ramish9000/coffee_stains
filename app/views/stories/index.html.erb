@@ -20,8 +20,8 @@
       <% @stories.each do |story| %> 
       <%= link_to story do %>
 
-      <div class="col-sm-4 text-center">
-        <%= image_tag story.image.detail.url, class: "" %>
+      <div class="col-sm-3 text-center">
+        <%= image_tag story.image.detail.url, class: "storyboard-img" %>
         <h3><%= story.title %>
           <small><%= story.summary %></small>
         </h3>
