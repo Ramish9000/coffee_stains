@@ -1097,13 +1097,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: solid black;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
-  text-decoration: underline;
+  /*color: #23527c;*/
+  /*text-decoration: underline;*/
 }
 a:focus {
   outline: thin dotted;
@@ -1342,21 +1342,21 @@ mark,
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #286090;
+  /*color: #286090;*/
 }
 .text-success {
   color: #3c763d;
 }
 a.text-success:hover,
 a.text-success:focus {
-  color: #2b542c;
+  /*color: #2b542c;*/
 }
 .text-info {
   color: #31708f;
 }
 a.text-info:hover,
 a.text-info:focus {
-  color: #245269;
+  /*color: #245269;*/
 }
 .text-warning {
   color: #8a6d3b;
@@ -1370,7 +1370,7 @@ a.text-warning:focus {
 }
 a.text-danger:hover,
 a.text-danger:focus {
-  color: #843534;
+  /*color: #843534;*/
 }
 .bg-primary {
   color: #fff;
@@ -1378,35 +1378,35 @@ a.text-danger:focus {
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #286090;
+  /*background-color: #286090;*/
 }
 .bg-success {
   background-color: #dff0d8;
 }
 a.bg-success:hover,
 a.bg-success:focus {
-  background-color: #c1e2b3;
+  /*background-color: #c1e2b3;*/
 }
 .bg-info {
   background-color: #d9edf7;
 }
 a.bg-info:hover,
 a.bg-info:focus {
-  background-color: #afd9ee;
+  /*background-color: #afd9ee;*/
 }
 .bg-warning {
   background-color: #fcf8e3;
 }
 a.bg-warning:hover,
 a.bg-warning:focus {
-  background-color: #f7ecb5;
+  /*background-color: #f7ecb5;*/
 }
 .bg-danger {
   background-color: #f2dede;
 }
 a.bg-danger:hover,
 a.bg-danger:focus {
-  background-color: #e4b9b9;
+  /*background-color: #e4b9b9;*/
 }
 .page-header {
   padding-bottom: 9px;
@@ -3036,7 +3036,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333;
+  /*color: #333;*/
   text-decoration: none;
 }
 .btn:active,
@@ -3071,8 +3071,8 @@ fieldset[disabled] a.btn {
   border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: #333;
-  background-color: #e6e6e6;
+  /*color: #333;*/
+  /*background-color: #e6e6e6;*/
   border-color: #adadad;
 }
 .btn-default:active,
@@ -3092,7 +3092,7 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: #333;
-  background-color: #d4d4d4;
+  /*background-color: #d4d4d4;*/
   border-color: #8c8c8c;
 }
 .btn-default:active,

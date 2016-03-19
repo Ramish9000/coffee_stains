@@ -23,10 +23,15 @@ nav.navbar.navbar-default {
 #username-link-div {
 	margin-left: 120px;
 	margin-top: 15px;
+	background-color: white !important
 }
 
 a:visited {
 	color: black;
+}
+
+a:hover {
+	background-color: none !important
 }
 
 .storyboard-img {
