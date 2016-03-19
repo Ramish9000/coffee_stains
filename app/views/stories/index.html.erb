@@ -21,69 +21,17 @@
       <%= link_to story do %>
 
       <div class="col-sm-4 text-center">
-        <%= image_tag story.image.detail.url, class: "img-responsive" %>
-
-        <h3>John Smith
-          <small>Job Title</small>
+        <%= image_tag story.image.detail.url, class: "" %>
+        <h3><%= story.title %>
+          <small><%= story.summary %></small>
         </h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-        <h3>John Smith
-          <small>Job Title</small>
-        </h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-        <h3>John Smith
-          <small>Job Title</small>
-        </h3>
+        <% end %>
       </div>
       <% end %>
-      <div class="clearfix"></div>
+      <!-- <div class="clearfix"></div> -->
+      <!-- </div> -->
     </div>
-  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div>
-
-    <%# @stories.each do |story| %> 
-    <%#= link_to story do %>
-    <%#= image_tag story.image.detail.url %>
-    <%# end %> 
-
-    <p><%#= story.title %></p>
-    <p><%#= story.summary %></p>
-    <p><%#= story.user.name %></p>
-    <%# end %>
-
-  </div>
-
-
-
-
-</body>
-</html>
-<% end %>
+    
+  </body>
+  </html>
