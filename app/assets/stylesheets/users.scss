@@ -41,6 +41,7 @@
 
 /*EXPERIMENT*/
 #profile-container {
+    position: relative;
     width: 80%;
     margin: 18px auto;
 }
@@ -49,6 +50,7 @@
     height: 200px;
     float: left;
     background-color: black;
+    position: relative;
 }
 
 .first > img {
@@ -60,7 +62,7 @@
 #second {
     width: 70%;
     float: right;
-    height: 300px;
+    /*height: 300px;*/
     background-color: green;
 }
 #clear {
@@ -72,4 +74,9 @@
 	font-family: verdana, arial, helvetica, sans-serif !important;
 	font-size: 20px;
 	text-align: center;
+}
+
+.profile-stories {
+    margin-top: 20px;
+    position: absolute;
 }

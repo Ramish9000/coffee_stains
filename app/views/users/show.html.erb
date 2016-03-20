@@ -34,7 +34,7 @@
   <div id="second">
     <% @user.stories.each do |story| %>
 
-    <div class="col-md-3 text-center">
+    <div class="profile-stories col-md-3 text-center">
 
       <%= link_to story do %>
       <%= image_tag story.image.detail.url, class: "storyboard-img" %>
