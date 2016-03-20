@@ -34,3 +34,29 @@
 	color: white;
 	background-color: white !important
 }
+
+#profile-content {
+	margin-left: 500px;
+}
+
+/*EXPERIMENT*/
+#profile-container {
+    width: 80%;
+    /*background-color: #ffcc33;*/
+    margin: 18px auto;
+}
+#first {
+    width: 400px;
+    float: left;
+    height: 500px;
+    background-color: blue;
+}
+#second {
+    width: 200px;
+    float: left;
+    height: 300px;
+    background-color: green;
+}
+#clear {
+    clear: both;
+}
