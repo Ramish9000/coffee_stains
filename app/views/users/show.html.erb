@@ -22,10 +22,21 @@
   <!-- #1 -->
   <div id="first">
     <!-- photo -->
-    <%= link_to image_tag(@user.profile_photo.detail.url), @user.profile_photo.url, class: 'first' %>
+    <div id="photo-container">
+
+      <div id="photo-div">
+        <%= link_to image_tag(@user.profile_photo.detail.url), @user.profile_photo.url, class: 'first' %>
+      </div>
+    </div>
     <!-- Name --> 
     <div id="name" class="intro text">
-      <%= @user.name %> 
+      
+      <div id="plus1-div">
+        <%= @user.name %> 
+        <% if @user === current_user %>
+        <%= link_to image_tag('plus-outline.png'), edit_user_path(current_user) %>
+        <% end %>
+      </div>
       <%= @user.email %> 
     </div>
   </div>
@@ -34,11 +45,11 @@
   <!-- #2 -->
   <div id="second">
 
-      <div id="caption-container">
-        <% if @user === current_user %>
-          <%= link_to image_tag('plus.png'), new_story_path(current_user) %>
-        <% end %>
-        <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
+    <div id="caption-container">
+      <% if @user === current_user %>
+      <%= link_to image_tag('plus.png'), new_story_path(current_user) %>
+      <% end %>
+      <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
       </div>
 
       <% @user.stories.each do |story| %>
