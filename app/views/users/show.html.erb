@@ -15,74 +15,42 @@
 
     </ul>
   </div>
-  </nav> -->
+</nav> -->
 
-  <div class="box" || id="profile-container">
-      <div id="first">
-        <!-- photo -->
-        <%= link_to image_tag(@user.profile_photo.detail.url), @user.profile_photo.url, class: 'first' %>
-        <!-- Name --> 
-        <div id="name" class="intro text">
-        <%= @user.name %> 
-        </div>
-      </div>
-      <div id="second"></div>
-      <div id="clear"></div>
+<div class="box" || id="profile-container">
+
+  <!-- #1 -->
+  <div id="first">
+    <!-- photo -->
+    <%= link_to image_tag(@user.profile_photo.detail.url), @user.profile_photo.url, class: 'first' %>
+    <!-- Name --> 
+    <div id="name" class="intro text">
+      <%= @user.name %> 
+    </div>
   </div>
 
 
+  <!-- #2 -->
+  <div id="second">
+    <% @user.stories.each do |story| %>
 
+    <div class="col-md-3 text-center">
 
-        <p class="prf-txt">
-         <%= @user.name %> 
-       </p>
+      <%= link_to story do %>
+      <%= image_tag story.image.detail.url, class: "storyboard-img" %>
+      <p id="storyboard-storyTitle"><%= story.title %></p>
+      <% end %>
 
-       <p class="prf-txt">
-        <%= @user.email %>
-      </p>
-
-<!--       <div class="Snippet-container">
-        <p >
-
-          <%#= @user.snippet_title %>
-          <br>
-          <br>
-
-          <%#= @user.snippet_content %>
-        </p>
-      </div> -->
-
+      <%= link_to story.user do %>
+      <h6 id="storyboard-storyAuthor"><%= story.user.username %></h6>
+      <% end %>
     </div>
 
+    <% end %>
   </div>
 
 
-
-
-
-  <!-- STORIES TAB -->
-  <div role="tabpanel" class="tab-pane" id="Stories">
-    <p>
-
-
-      <body class="prf-str-bdy">
-        <!-- <strong>Stories:</strong> -->
-        <% @user.stories.each do |story| %>
-
-        <%= link_to story do %>
-        <%= image_tag story.image.detail.url%>
-        <% end %>
-
-        <p class="prf-str-txt"><%= story.title %></p>
-        <p class="prf-str-txt"><%= story.summary %></p>
-
-        <% end %>
-      </body>
-
-
-    </p>
-  </div>
-
+  <div id="clear"></div>
 </div>
 
 </body>
