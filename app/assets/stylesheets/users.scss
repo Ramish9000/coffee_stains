@@ -41,16 +41,17 @@
 
 /*EXPERIMENT*/
 #profile-container {
-    position: relative;
+    /*position: relative;*/
     width: 80%;
     margin: 18px auto;
+    padding-bottom: 50px;
 }
 #first {
     width: 200px;
     height: 200px;
     float: left;
-    background-color: black;
-    position: relative;
+    background-color: white;
+    /*position: relative;*/
 }
 
 .first > img {
@@ -63,14 +64,15 @@
     width: 70%;
     float: right;
     /*height: 300px;*/
-    background-color: green;
+    background-color: white;
 }
+
 #clear {
     clear: both;
 }
 
 #name {
-	margin: 10px auto;
+	margin: 10px 10px;
 	font-family: verdana, arial, helvetica, sans-serif !important;
 	font-size: 20px;
 	text-align: center;
@@ -78,5 +80,16 @@
 
 .profile-stories {
     margin-top: 20px;
-    position: absolute;
+    /*position: absolute;*/
+}
+
+/*.NoUserImg > img {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    z-index: -1;
+}*/
+
+#user-stories-caption {
+    text-align: center;
 }

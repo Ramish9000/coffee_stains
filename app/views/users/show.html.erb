@@ -26,12 +26,14 @@
     <!-- Name --> 
     <div id="name" class="intro text">
       <%= @user.name %> 
+      <%= @user.email %> 
     </div>
   </div>
 
 
   <!-- #2 -->
   <div id="second">
+    <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
     <% @user.stories.each do |story| %>
 
     <div class="profile-stories col-md-3 text-center">
