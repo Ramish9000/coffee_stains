@@ -19,28 +19,18 @@
 
   <div class="box" || id="profile-container">
       <div id="first">
+        <!-- photo -->
         <%= link_to image_tag(@user.profile_photo.detail.url), @user.profile_photo.url, class: 'first' %>
+        <!-- Name --> 
+        <div id="name" class="intro text">
+        <%= @user.name %> 
+        </div>
       </div>
       <div id="second"></div>
       <div id="clear"></div>
   </div>
 
 
-
-
-
-
-
-
-
-  <!-- Tab panes -->
-  <!-- <div class="tab-content"> -->
-    <!-- <div id="Profile" role="tabpanel" class="tab-pane active" > -->
-
-      <!-- <div id="profile-content"> -->
-        <!-- <p> -->
-          <%= link_to image_tag(@user.profile_photo.detail.url, :class => "img-circle"), @user.profile_photo.url %>
-        <!-- </p> -->
 
 
         <p class="prf-txt">
