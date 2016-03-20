@@ -3,31 +3,35 @@
 <head>
   <title>Profile Page</title>
 </head>
-<body class="prf-bdy">
+<body id="profile-body" >
 
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
+  <nav class="profile-navbar" role="navigation">
+  <div class="navbar collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav nav-tabs nav navbar-nav" role="tablist">
 
-    <li><a href="#Profile" aria-controls="Profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li><a href="#Stories" aria-controls="Stories" role="tab" data-toggle="tab">Stories</a></li>
+      <li><a href="#Profile" aria-controls="Profile" role="tab" data-toggle="tab">Profile</a></li>
+      <li><a href="#Stories" aria-controls="Stories" role="tab" data-toggle="tab">Stories</a></li>
 
-  </ul>
+    </ul>
+  </div>
+  </nav>
 
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="Profile">
 
       <div class="prf-cnt">
-      <p>
-        <%= link_to image_tag(@user.profile_photo.detail.url, :class => "img-circle"), @user.profile_photo.url %>
-      </p>
+        <p>
+          <%= link_to image_tag(@user.profile_photo.detail.url, :class => "img-circle"), @user.profile_photo.url %>
+        </p>
 
 
-      <p class="prf-txt">
-       <%= @user.name %> 
-      </p>
+        <p class="prf-txt">
+         <%= @user.name %> 
+       </p>
 
-      <p class="prf-txt">
+       <p class="prf-txt">
         <%= @user.email %>
       </p>
 
@@ -42,31 +46,31 @@
         </p>
       </div> -->
 
-      </div>
-      
+    </div>
+
   </div>
 
 
 
 
 
-<!-- STORIES TAB -->
+  <!-- STORIES TAB -->
   <div role="tabpanel" class="tab-pane" id="Stories">
     <p>
 
 
-    <body class="prf-str-bdy">
-      <!-- <strong>Stories:</strong> -->
-      <% @user.stories.each do |story| %>
+      <body class="prf-str-bdy">
+        <!-- <strong>Stories:</strong> -->
+        <% @user.stories.each do |story| %>
 
-      <%= link_to story do %>
-      <%= image_tag story.image.detail.url%>
-      <% end %>
+        <%= link_to story do %>
+        <%= image_tag story.image.detail.url%>
+        <% end %>
 
-      <p class="prf-str-txt"><%= story.title %></p>
-      <p class="prf-str-txt"><%= story.summary %></p>
-      
-      <% end %>
+        <p class="prf-str-txt"><%= story.title %></p>
+        <p class="prf-str-txt"><%= story.summary %></p>
+
+        <% end %>
       </body>
 
 

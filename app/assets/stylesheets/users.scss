@@ -15,3 +15,22 @@
 	padding-top: 20px;
 	color: #513B56;
 }
+
+/*PROFILE PAGE*/
+#profile-body {
+	background-image: url(bg.jpg);
+	/*background-size: cover;*/
+}
+
+.profile-navbar {
+	width: 350px;
+	margin-left: 500px;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	color: white;
+	background-color: white !important
+}
