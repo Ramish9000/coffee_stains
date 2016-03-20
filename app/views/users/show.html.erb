@@ -36,7 +36,7 @@
 
       <div id="caption-container">
         <% if @user === current_user %>
-          <%= image_tag('plus.png') %>
+          <%= link_to image_tag('plus.png'), new_story_path(current_user) %>
         <% end %>
         <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
       </div>
