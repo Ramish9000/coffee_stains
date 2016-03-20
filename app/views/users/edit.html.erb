@@ -1,6 +1,31 @@
-<h1>Editing User</h1>
+<!-- CAPTION EDIT PROFILE -->
+<body id="edit-profile-body">
+<div class="box" id="edit-container-box">
+<!-- <div class="col-lg-4"> -->
+	<hr>
+	<h2 class="intro-text text-center"> <strong>Edit</strong> Profile</h2>
+	<hr>
 
-<%= render 'form' %>
+	<%= form_for(@user) do |f| %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+	<div class="field">
+		<h4 class="intro-text text-center" id="edit-photo-id"> <strong>Profile Photo: </strong><%= f.file_field :profile_photo %></h4>
+		<%#= f.label :profile_photo %>
+
+	</div>
+
+	<div class="field">
+		<h4 class="intro-text" id="edit-photo-id"> <strong> Name: </strong><%= f.text_field :name %> </h4>
+	</div>
+
+
+	<% end %>
+
+	<%#= render 'form' %>
+
+	<%= link_to 'Show', @user %> |
+	<%= link_to 'Back', users_path %>
+
+</div>
+<!-- </div> -->
+</body>
