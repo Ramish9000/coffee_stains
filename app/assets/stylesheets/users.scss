@@ -46,10 +46,16 @@
 }
 #first {
     width: 200px;
-    float: left;
     height: 200px;
+    float: left;
     background-color: blue;
 }
+
+.first  > img {
+	width: 200px;
+	height: 200px;
+}
+
 #second {
     width: 70%;
     float: right;
