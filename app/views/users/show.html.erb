@@ -33,27 +33,34 @@
 
   <!-- #2 -->
   <div id="second">
-    <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
-    <% @user.stories.each do |story| %>
 
-    <div class="profile-stories col-md-3 text-center">
+      <div id="caption-container">
+        <% if @user === current_user %>
+          <%= image_tag('plus.png') %>
+        <% end %>
+        <h3 id="user-stories-caption"> <%= @user.name %>'s <Strong>Stories</Strong> <h3>
+      </div>
 
-      <%= link_to story do %>
-      <%= image_tag story.image.detail.url, class: "storyboard-img" %>
-      <p id="storyboard-storyTitle"><%= story.title %></p>
-      <% end %>
+      <% @user.stories.each do |story| %>
 
-      <%= link_to story.user do %>
-      <h6 id="storyboard-storyAuthor"><%= story.user.username %></h6>
+      <div class="profile-stories col-md-3 text-center">
+
+        <%= link_to story do %>
+        <%= image_tag story.image.detail.url, class: "storyboard-img" %>
+        <p id="storyboard-storyTitle"><%= story.title %></p>
+        <% end %>
+
+        <%= link_to story.user do %>
+        <h6 id="storyboard-storyAuthor"><%= story.user.username %></h6>
+        <% end %>
+      </div>
+
       <% end %>
     </div>
 
-    <% end %>
+
+    <div id="clear"></div>
   </div>
-
-
-  <div id="clear"></div>
-</div>
 
 </body>
 </html>
