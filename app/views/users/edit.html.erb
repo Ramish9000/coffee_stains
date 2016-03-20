@@ -9,8 +9,8 @@
 	<%= form_for(@user) do |f| %>
 
 	<div class="field">
-		<h4 class="intro-text text-center" id="edit-photo-id"> <strong>Profile Photo: </strong><%= f.file_field :profile_photo %></h4>
-		<%#= f.label :profile_photo %>
+		<h4 class="intro-text" id="edit-photo-id"> <strong>Profile Photo: </strong></h4>
+		<%= f.file_field :profile_photo %>
 
 	</div>
 
@@ -18,14 +18,19 @@
 		<h4 class="intro-text" id="edit-photo-id"> <strong> Name: </strong><%= f.text_field :name %> </h4>
 	</div>
 
+	<div class="field">
+		<h4 class="intro-text" id="edit-photo-id"> <strong> Userame: </strong><%= f.text_field :username %> </h4>
+	</div>
+
+	<div class="actions">
+	  <%= f.submit "Save", class: "save btn btn-default btn-lg" %>
+	</div>
 
 	<% end %>
 
 	<%#= render 'form' %>
 
-	<%= link_to 'Show', @user %> |
-	<%= link_to 'Back', users_path %>
-
+	<%= link_to 'Return to Profile', @user %>
 </div>
 <!-- </div> -->
 </body>

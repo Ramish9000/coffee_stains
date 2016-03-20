@@ -138,11 +138,17 @@
 }
 
 #edit-profile-body {
-    background-color: blue;
+    background-image: url('bg.jpg');
 }
 
 #edit-container-box {
     width: 500px;
     height: 400px;
     margin-left: 30%
+}
+
+.save {
+    margin-left: 40%;
+    margin-top: 10%;
+    background-color: black !important;
 }
