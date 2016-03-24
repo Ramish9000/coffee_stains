@@ -1,36 +1,35 @@
 <!-- CAPTION EDIT PROFILE -->
 <body id="edit-profile-body">
-<div class="box" id="edit-container-box">
-<!-- <div class="col-lg-4"> -->
-	<hr>
-	<h2 class="intro-text text-center"> <strong>Edit</strong> Profile</h2>
-	<hr>
+	<div class="box" id="edit-container-box">
+		<!-- <div class="col-lg-4"> -->
+		<hr>
+		<h2 class="intro-text text-center"> <strong>Edit</strong> Profile</h2>
+		<hr>
 
-	<%= form_for(@user) do |f| %>
+		<%= form_for(@user) do |f| %>
 
-	<div class="field">
-		<h4 class="intro-text" id="edit-photo-id"> <strong>Profile Photo: </strong></h4>
-		<%= f.file_field :profile_photo %>
+		<div class="field">
+			<h4 class="intro-text" id="edit-photo-id"> <strong>Profile Photo: </strong></h4>
+			<%= f.file_field :profile_photo %>
 
+		</div>
+
+		<div class="field">
+			<h4 class="intro-text" id="edit-photo-id"> <strong> Name: </strong><%= f.text_field :name %> </h4>
+		</div>
+
+		<div class="field">
+			<h4 class="intro-text" id="edit-photo-id"> <strong> Userame: </strong><%= f.text_field :username %> </h4>
+		</div>
+
+		<div class="actions">
+			<%= f.submit "Save", class: "save btn btn-default btn-lg" %>
+		</div>
+
+		<% end %>
+
+		<%= link_to 'Return to Profile', @user %>
+		
+		<%= button_to 'Delete Account', current_user , method: :delete %>
 	</div>
-
-	<div class="field">
-		<h4 class="intro-text" id="edit-photo-id"> <strong> Name: </strong><%= f.text_field :name %> </h4>
-	</div>
-
-	<div class="field">
-		<h4 class="intro-text" id="edit-photo-id"> <strong> Userame: </strong><%= f.text_field :username %> </h4>
-	</div>
-
-	<div class="actions">
-	  <%= f.submit "Save", class: "save btn btn-default btn-lg" %>
-	</div>
-
-	<% end %>
-
-	<%#= render 'form' %>
-
-	<%= link_to 'Return to Profile', @user %>
-</div>
-<!-- </div> -->
 </body>

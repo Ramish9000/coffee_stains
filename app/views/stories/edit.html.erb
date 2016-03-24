@@ -3,7 +3,7 @@
 	<div class="box" id="new-story-box">
 
 		<hr>
-		<h2 class="intro-text text-center"> <strong>New</strong> Story</h2>
+		<h2 class="intro-text text-center"> <strong>Edit</strong> Story</h2>
 		<hr>
 
 		<!-- ERRORS -->
@@ -41,9 +41,10 @@
 			<%= f.submit 'Save', class: "save btn btn-default btn-lg"%>
 		</div>
 
-		<%= button_to 'DELETE', story_path , method: :delete %>
 		<% end %>
-
+		<div class="col-md-2 story-delete-link">
+		<%= link_to 'Delete This Story?', story_path , method: :delete %>
+		</div>
 	</div>
 
 </body>

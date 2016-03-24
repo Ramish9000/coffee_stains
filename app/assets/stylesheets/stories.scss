@@ -75,15 +75,15 @@ a:hover {
 .summary > textarea {
 	width: 610px;
 	height: 100px;
-	background-color: black;
-	color: white;
+	/*background-color: black;*/
+	/*color: white;*/
 }
 
 .content > textarea {
 	width: 1200px;
 	height: 300px;
-	background-color: black;
-	color: white;
+	/*background-color: black;*/
+	/*color: white;*/
 }
 
 .save-story > input {
@@ -124,4 +124,8 @@ a:hover {
 	margin-left: 800px;
 	margin-right: 6px;
 	background-color: white !important
+}
+
+.story-delete-link > a {
+	color: blue;
 }

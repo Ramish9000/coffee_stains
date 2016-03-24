@@ -113,10 +113,17 @@
 }
 
 #profile-username {
-    position: absolute;
+    /*position: absolute;*/
+    float: left;
     font-size: 15px;
 }
 
+#profile-username > a {
+    /*position: absolute;*/
+    float: left;
+    font-size: 15px;
+    color: blue;
+}
 
 
 
