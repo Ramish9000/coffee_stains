@@ -21,15 +21,15 @@
 		<% end %>
 
 
-		<div class="field col-md-4 ">
+		<div class="field col-md-2">
 			<%= f.label :image %><br>
 			<%= f.file_field :image %>
 		</div>
-		<div class="field col-md-4 title">
+		<div class="field col-md-2 title">
 			<%= f.label :title %><br>
 			<%= f.text_field :title %>
 		</div>
-		<div class="field summary">
+		<div class="field col-md-12 summary">
 			<%= f.label :summary %><br>
 			<%= f.text_area :summary %>
 		</div>
@@ -37,8 +37,8 @@
 			<%= f.label :content %><br>
 			<%= f.text_area :content %>
 		</div>
-		<div class="actions">
-			<%= f.submit %>
+		<div class="actions col-md-12 save-story">
+			<%= f.submit 'Save', class: "save btn btn-default btn-lg"%>
 		</div>
 		<% end %>
 
