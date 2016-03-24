@@ -1,6 +1,49 @@
-<h1>Editing Story</h1>
+<body id="new-story-body">
 
-<%= render 'form' %>
+	<div class="box" id="new-story-box">
 
-<%= link_to 'Show', @story %> |
-<%= link_to 'Back', stories_path %>
+		<hr>
+		<h2 class="intro-text text-center"> <strong>New</strong> Story</h2>
+		<hr>
+
+		<!-- ERRORS -->
+		<%= form_for(@story) do |f| %>
+		<% if @story.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+			<ul>
+				<% @story.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+
+		<div class="field col-md-2">
+			<%= f.label :image %><br>
+			<%= f.file_field :image %>
+		</div>
+		<div class="field col-md-2 title">
+			<%= f.label :title %><br>
+			<%= f.text_field :title %>
+		</div>
+		<div class="field col-md-12 summary">
+			<%= f.label :summary %><br>
+			<%= f.text_area :summary %>
+		</div>
+		<div class="field col-md-12 content">
+			<%= f.label :content %><br>
+			<%= f.text_area :content %>
+		</div>
+		<div class="actions col-md-12 save-story">
+			<%= f.submit 'Save', class: "save btn btn-default btn-lg"%>
+		</div>
+
+		<%= button_to 'DELETE', story_path , method: :delete %>
+		<% end %>
+
+	</div>
+
+</body>
