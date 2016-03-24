@@ -1,23 +1,31 @@
-<p>
-  <b>Image:</b>
-    <%= link_to image_tag(@story.image.detail.url), @story.image.url %>
-  </p>
+<body id="edit-story-body">
+	<div class="box" || id="profile-container">
 
-<p>
-  <strong>Title:</strong>
-  <%= @story.title %>
-</p>
+		<div id="first">
+			<div id="photo-container">
+				<div id="photo-div">
+					<%= link_to image_tag(@story.image.detail.url), @story.image.url, class: 'first' %>
+				</div>
+			</div>
+		</div>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @story.summary %>
-</p>
+		<p>
+			<strong>Title:</strong>
+			<%= @story.title %>
+		</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @story.content %>
-</p>
+		<p>
+			<strong>Summary:</strong>
+			<%= @story.summary %>
+		</p>
 
-<td><%= link_to 'Create', new_story_path(@story) %></td>
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+		<p>
+			<strong>Content:</strong>
+			<%= @story.content %>
+		</p>
+
+		<td><%= link_to 'Create', new_story_path(@story) %></td>
+		<%= link_to 'Edit', edit_story_path(@story) %> |
+		<%= link_to 'Back', stories_path %>
+	</div>
+</body>
