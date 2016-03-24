@@ -9,23 +9,37 @@
 			</div>
 		</div>
 
-		<p>
-			<strong>Title:</strong>
-			<%= @story.title %>
-		</p>
+		<div id="second">
 
-		<p>
-			<strong>Summary:</strong>
-			<%= @story.summary %>
-		</p>
+			<div id="caption-container">
+				<h3 id="user-stories-caption" class="story-title"><%= @story.title %></h3>
 
-		<p>
-			<strong>Content:</strong>
-			<%= @story.content %>
-		</p>
+				<% if @story.user === current_user %>
+				<div id="edit-story-button" class="btn btn-default btn-lg">
+					<%= link_to 'Edit', edit_story_path(@story) %>
+				</div>
+				<% end %>
+			</div>
+			
 
-		<td><%= link_to 'Create', new_story_path(@story) %></td>
-		<%= link_to 'Edit', edit_story_path(@story) %> |
-		<%= link_to 'Back', stories_path %>
+			<div id="summary-container">
+				<%= @story.summary %>
+			</div>
+
+			<div id="content-container">
+				<%= @story.content %>
+			</div>
+
+		</div>
+
 	</div>
+
+
+
+
+
+	<%#= link_to 'Create', new_story_path(@story) %>
+	
+	<%= link_to 'Back', stories_path %>
+</div>
 </body>
