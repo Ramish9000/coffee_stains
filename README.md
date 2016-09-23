@@ -29,8 +29,13 @@
 
 
 <b>INSTRUCTIONS TO VIEW ON LOCAL HOST:</b>
+<br>
 1. Open Terminal
+<br>
 2. Navigate to the project directory.
+<br>
 3. Run 'Rails s'
+<br>
 4. The terminal will show you which Port the site is loaded at.
+<br>
 5. On Chrome, go to 'Localhost:3000'
